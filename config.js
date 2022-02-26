@@ -11,7 +11,7 @@ exports.parse = function () {
           process.exit();
         }
     } else {
-        console.log("config.yaml not found")
+        console.log(`config file ${file} not found`)
         process.exit();
     }
 }
