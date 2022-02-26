@@ -1,0 +1,18 @@
+# Determines if the values read should be parsed or sent raw
+sendUnparsed: false
+serial:
+    path: "/dev/ttyUSB0"
+    baudRate: 115200
+    dataBits: 8
+    stopBits: 1
+    parity: 'none'
+
+mqtt:
+    # URL to MQTT broker
+    url: 'mqtt://localhost'
+    # Configuration passed to the MQTT library
+    options:
+        username: 'myUser'
+        password: 'myPassword'
+    # Prefix to mqtt topic
+    topicPrefix: 'electricity-meter'
