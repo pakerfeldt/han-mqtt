@@ -2,7 +2,7 @@
   "name": "han-mqtt",
   "version": "1.0.0",
   "description": "HAN / P1 / H1 to MQTT",
-  "keywords": ["han", "p1", "h1", "mqtt", "electricity", "meter"],
+  "keywords": ["han", "p1", "h1", "mqtt", "electricity", "meter", "IEC 62056-21"],
   "bugs": {
     "url": "https://github.com/pakerfeldt/han-mqtt/issues"
   },
