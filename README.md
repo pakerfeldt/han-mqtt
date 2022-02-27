@@ -17,7 +17,7 @@ This app does not request data from the source but assumes that data will be sen
 
 ## Running with docker
 `sudo docker run -e HAN_MQTT_CONFIG=/config/config.yaml -v /home/pa/han-mqtt-config/:/config --privileged pakerfeldt/han-mqtt:latest`
-This assumes a directory called `/home/pa/han-mqtt-config/` on the host machine which contains your `config.yaml`. Obviously change the host path to wherever you choose to store the config file.
+This assumes a directory called `/home/pa/han-mqtt-config/` on the host machine which contains your `config.yaml`. Obviously change the host path to wherever you choose to store the config file. `--privileged` is needed for the container to gain access of the physical serial interface.
 
 ## Running with docker-compose
 Perhaps the most convenient of choices. Ensure you have docker and docker-compose installed. Then create a `docker-compose.yaml` containing:
@@ -39,6 +39,8 @@ Now you can build and run the image.
 `sudo docker-compose build hanmqtt`
 
 `sudo docker-compose up -d`
+
+`privileged: true` is needed for the container to gain access of the physical serial interface.
 
 ## HAN / P1 port
 HAN or P1 is the name of the RJ12 port found on Swedish electricity meters and is meant to be used for local applications such as consumption metrics or load balancers. This interface uses 115200 baud rate with 8 databits, 1 stopbit and parity none. However, signal is inverted thus cannot be connected directly to a serial device unless first taken care of.
