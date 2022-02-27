@@ -58,4 +58,5 @@ You might very well find smaller circuit boards but this was the one I went for.
 Here's the schematics which can also be found, together with more description in Swedish, on https://www.akehedman.se/wordpress/?cat=39
 
 <img src="https://user-images.githubusercontent.com/195860/155875137-820ef95f-fce9-412d-8723-b0e575b98b13.png" width="640">
+Additional information on the HAN port on Swedish electricity meters can be found here: https://hanporten.se/svenska/porten/
 
