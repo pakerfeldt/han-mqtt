@@ -12,6 +12,7 @@ This app does not request data from the source but assumes that data will be sen
 
 ## Running with npm
 `npm install -g han-mqtt`
+
 `HAN_MQTT_CONFIG=./config.yaml han-mqtt`
 
 ## Running with docker
@@ -34,7 +35,9 @@ services:
     restart: unless-stopped
 ```
 Now you can build and run the image. 
+
 `sudo docker-compose build hanmqtt`
+
 `sudo docker-compose up -d`
 
 ## HAN / P1 port
@@ -52,6 +55,7 @@ This readme won't go into details on how to accomplish this. There's already gui
 | [USB-serielladapter PL2303](https://www.electrokit.com/produkt/usb-serielladapter-pl2303/)
 
 You might very well find smaller circuit boards but this was the one I went for.
+Here's the schematics which can also be found, together with more description in Swedish, on https://www.akehedman.se/wordpress/?cat=39
 
-This blog post (Swedish) shows pinout of the HAN / P1 port and also the schematics of how to solder it together.
-https://www.akehedman.se/wordpress/?cat=39
+<img src="https://user-images.githubusercontent.com/195860/155875137-820ef95f-fce9-412d-8723-b0e575b98b13.png" width="640">
+
