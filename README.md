@@ -11,6 +11,8 @@ This app does not request data from the source but assumes that data will be sen
 ---
 
 ## Running with npm
+Ensure you are running at least node version 12.
+
 `npm install -g han-mqtt`
 
 `HAN_MQTT_CONFIG=./config.yaml han-mqtt`
