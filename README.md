@@ -10,29 +10,26 @@ This app does not request data from the source but assumes that data will be sen
 
 ---
 
-## Running with npm
-Ensure you are running at least node version 12.
+## Running locally
+Ensure you have go 1.24 installed.
 
-`npm install -g han-mqtt`
-
-`HAN_MQTT_CONFIG=./config.yaml han-mqtt`
+`go run .`
 
 ## Running with docker
-`sudo docker run -e HAN_MQTT_CONFIG=/config/config.yaml -v /home/pa/han-mqtt-config/:/config --privileged pakerfeldt/han-mqtt:latest`
-This assumes a directory called `/home/pa/han-mqtt-config/` on the host machine which contains your `config.yaml`. Obviously change the host path to wherever you choose to store the config file. `--privileged` is needed for the container to gain access of the physical serial interface.
+`sudo docker run -e HAN_MQTT_CONFIG=/config/config.yaml -v /home/ubuntu/han-mqtt-config/:/config --privileged pakerfeldt/han-mqtt:latest`
+This assumes a directory called `/home/ubuntu/han-mqtt-config/` on the host machine which contains your `config.yaml`. Obviously change the host path to wherever you choose to store the config file. `--privileged` is needed for the container to gain access of the physical serial interface.
 
 ## Running with docker-compose
 Perhaps the most convenient of choices. Ensure you have docker and docker-compose installed. Then create a `docker-compose.yaml` containing:
 ```yaml
-version: '3.2'
 services:
-  hanmqtt:
+  han-mqtt:
     image: pakerfeldt/han-mqtt:latest
     environment:
       - NODE_ENV=production
       - HAN_MQTT_CONFIG=/config/config.yaml
     volumes:
-      - /home/pa/han-mqtt-config:/config
+      - /home/ubuntu/han-mqtt-config:/config
     privileged: true
     restart: unless-stopped
 ```
@@ -40,7 +37,7 @@ services:
 
 Now you can build and run the image. 
 
-`sudo docker-compose build hanmqtt`
+`sudo docker-compose build han-mqtt`
 
 `sudo docker-compose up -d`
 

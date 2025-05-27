@@ -1,3 +1,6 @@
+# Set log level, -1 trace, 0 debug, 1 info (default), 2 warn, 3 error, 4 fatal.
+# logLevel: 1
+
 # Determines if the values read should be parsed or sent raw
 sendUnparsed: false
 serial:
