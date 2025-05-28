@@ -26,7 +26,6 @@ services:
   han-mqtt:
     image: pakerfeldt/han-mqtt:latest
     environment:
-      - NODE_ENV=production
       - HAN_MQTT_CONFIG=/config/config.yaml
     volumes:
       - /home/ubuntu/han-mqtt-config:/config
